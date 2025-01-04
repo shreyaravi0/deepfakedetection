@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Deepfake Quiz</h1>
+        <p>Click on the images or videos to see if they are deepfakes and learn how to spot them!</p>
+        <div class="image-gallery">
+            <!-- Example of Face Swap Deepfake -->
+            <div class="image-item" onclick="showPopup('deepfake_face_swap')">
+                <img src="images/faceswap.jpg" alt="Face Swap Deepfake">
+                <p> GUESS THE TYPE OF DEEPFAKE </p>
+            </div>
+            
+            <div class="image-item" onclick="showPopup('deepfake_audio')">
+                <audio controls>
+                    <source src="images/linus-original-DEMO.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>Click to listen to the original audio</p>
+                <audio controls>
+                    <source src="images/linus-to-musk-DEMO.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>Click to listen to the deepfake audio</p>
+                <p> GUESS THE TYPE OF DEEPFAKE </p>
+            </div>
+
+            <!-- Example of Video Manipulation Deepfake -->
+            <div class="image-item">
+                <video controls onclick="showPopup('deepfake_video_manipulation')"width="300" height="200">
+                    <source src="images/record.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p> GUESS THE TYPE OF DEEPFAKE </p>
+               
+            </div>
+
+            <!-- Example of Avatar Deepfake -->
+            <div class="image-item" onclick="showPopup('deepfake_avatar')">
+                <img src="images/avatar.jpg" alt="Avatar Deepfake">
+                <p> GUESS THE TYPE OF DEEPFAKE </p>
+            </div>
+
+            <!-- Example of Puppet Deepfake -->
+            <div class="image-item" onclick="showPopup('deepfake_puppet')">
+                <img src="images/puppet.jpg" alt="Puppet Deepfake">
+                <p> GUESS THE TYPE OF DEEPFAKE </p>
+            </div>
+           
+        </div>
+
+        <!-- Popup for the explanation -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">×</span>
+                <h2 id="popup-title">Is this a Deepfake?</h2>
+                <p id="popup-description">Explanation text will go here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
